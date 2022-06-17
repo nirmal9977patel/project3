@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign_up</title>
+    <link rel="stylesheet" href="./style/signup.css">
+    <link rel="stylesheet" href="./style/index.css ">
+   
+<body>
+    <div id="navbar"></div>
+   <div id="sign">
+    <div id="sign_up">
+        <h1 id="h">SIGN-UP</h1>
+     <a href="index.html"> <h4>Close</h4></a>
+    </div>
+
+     <hr>
+
+    
+        <p id="s">Email_Address</p>
+        <input type="email" id="signupemail">
+   
+        <p id="s">Passwrod</p>
+        <input type="text" id="signuppassword"><br>
+   
+        <button id="login" >LOGIN</button>
+
+     <h5>No account yet?</h5>
+    
+     <p id="tag">Welcome to Kimaye! Help us with a few details to know you better as you take the journey of enjoying our safe and tasty fruits.</p>
+     <a href="resister.html"><button id="resis">Create An Account</button></a></div>
+     <div id="footer"></div>
+   </div>
+</body>
+</html>
+ <script type="module" >
+ import navbar from "./component/navbar.js";
+document.getElementById("navbar").innerHTML=navbar();
+import footer from "./component/footer.js";
+document.getElementById("footer").innerHTML=footer();
+
+document.getElementById("login").addEventListener("click", () => {
+	let details = JSON.parse(localStorage.getItem("UserDetails")) || [];
+
+	function User( Email, Pass) {
+        
+		this.UserEmail = Email;
+		this.UserPass = Pass;
+	}
+
+	
+	let Useremail = document.getElementById("signupemail").value;
+	let Userpass = document.getElementById("signuppassword").value;
+
+	let obj = new User( Useremail, Userpass);
+
+	details.push(obj);
+
+	localStorage.setItem("UserDetails", JSON.stringify(details));
+
+	alert(`Signup successful!`);
+
+	window.location.href = "index.html";
+});
+
+
+ </script>
+
+

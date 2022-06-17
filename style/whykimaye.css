@@ -1,0 +1,35 @@
+.a{
+  background-color:#a16a5f ;
+  margin: auto;
+  text-align: center;      
+}
+.b{
+    text-align: center;
+}
+#whykimaye{
+    text-align: center; 
+    background-color: hwb(36 35% 7%);
+    /* display: flex; */
+}
+.c{
+    display: flex;
+    width: 70%;
+    margin: auto;
+   
+    /* border: 1px solid red; */
+    
+}
+#whyimg{
+    width: 60%;
+}.d{
+    margin-top:30px;
+    text-align: center;
+    background-color: red;
+}.e{
+    text-align: center;
+    background-color: rgba(64, 185, 100, 0.976);
+
+}
+.f{
+    text-align: center;
+}

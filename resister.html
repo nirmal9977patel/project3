@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resister</title>
+   <link rel="stylesheet" href="./style/resister.css">
+   <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="resister">
+        <p id="p">First_Name</p><br>
+        <input type="text"id="name" ><br>
+    
+        <p id="p">Last_Name</p><br>
+        <input type="text" id="last_name"><br>
+    
+        <p id="p">Email</p><br>
+        <input type="email" id="email" ><br>
+    
+        <p id="p">Passwrod</p><br>
+        <input type="text" id="password" ><br>
+    
+        <button id="resis" >RESISTER</button>
+    
+        <h5>No account yet?</h5>
+    
+        <p id="tag">Welcome to Kimaye! Help us with a few details to know you better as you take the journey of enjoying our safe and tasty fruits.</p>
+        <a href="signup.html"><button id="login">Login</button></a></div>
+        <div id="footer"></div>
+</body>
+</html>
+<script type="module">
+     import navbar from "./component/navbar.js";
+document.getElementById("navbar").innerHTML=navbar();
+import footer from "./component/footer.js";
+document.getElementById("footer").innerHTML=footer();
+
+document.getElementById("resis").addEventListener("click", () => {
+	let details = JSON.parse(localStorage.getItem("UserDetails")) || [];
+
+	function User(Name,last_name, Email, Pass) {
+        this.Username=Name;
+		this.UserEmail = Email;
+		this.UserPass = Pass;
+        this.Userlastname=last_name;
+	}
+    let Userlastname = document.getElementById("last_name").value;
+	let Username = document.getElementById("name").value;
+	let Useremail = document.getElementById("email").value;
+	let Userpass = document.getElementById("password").value;
+
+	let obj = new User(Username, Userlastname,Useremail, Userpass);
+
+	details.push(obj);
+
+	localStorage.setItem("UserDetails", JSON.stringify(details));
+
+    if(obj=""){
+        alert(`Enter correct details`);
+    }else{
+        alert(`Resister successful!`); 
+    }
+	
+
+	window.location.href = "signup.html";
+});
+
+</script>

@@ -1,0 +1,29 @@
+#sign{
+    width: 250px;
+    /* border: 1px solid red; */
+    margin:auto ;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#sign_up{
+    background-color: black;
+    color: azure;
+    display: flex;
+    justify-content: space-around;
+}
+#s{
+    margin-bottom: -2px;
+}
+#login{
+    margin-top: 20px;
+    width: 180px;
+    font-size: 16px;
+}#login:hover{
+    background-color: black;
+    color: white;
+}#resis{
+    margin-bottom: 5px;
+    padding: 5px;
+}

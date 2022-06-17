@@ -1,0 +1,26 @@
+#p{
+    margin-bottom: -20px;
+}
+#resister{
+    width: 250px;
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#resis{
+    margin: 20px;
+    width: 180px;
+    background-color: rgb(223, 18, 18);
+    color: aliceblue;
+    border: none;
+    font-size: 15px;
+    padding: 3px;
+}
+#login{
+    margin: 30px;
+    /* background-color: rgb(223, 18, 18); */
+    color: red;
+    /* border: none; */
+    font-size: 20px;
+}
